@@ -1,0 +1,671 @@
+
+
+/*================================
+=============== Content
+==================================*/
+
+
+:root {
+    --Myblue:rgba(56, 95, 250, 0.963) ;
+    --Mylighblue:hsl(189, 68%, 90%);
+    --Mygrey:#44c767;
+    --Mywhite:white; 
+    --Myblack: #04030f;
+    --myTurquoise :#4db4bc;
+	--mydarkgreen: #18ab29;
+    --myOlivegreen: #2f6627;
+    --myLightgray: #ccc;
+}
+
+*{
+ 
+    padding: 5px;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+body{
+
+    font-family: base-font-family;
+    background-color: var(--Mylighblue);
+    direction: rtl;
+    margin-left: 15%;
+}
+
+    
+
+
+header {
+    padding: 0px;
+    margin-top: -5%;
+    align-self: center;
+    margin-right: 10%;
+  }
+  .logout {
+    text-decoration:none;
+    font-size:20px;
+    margin-left: 100%;
+    margin-right: 0%;
+    margin-top: -40%;
+    color: var(--Mywhite);
+    font-weight:bold;
+    border: var(--Myblack);
+}
+
+nav{
+  margin-right: 10%;
+  border-radius: 12px;
+  background: var(--Mywhite);
+  padding: 0 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.nav-content{
+  display: flex;
+  height: 130px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+.link-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+  width: 200px;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.link-item.active{
+  transform: translateY(-10px);
+}
+
+.link-text{
+  position: absolute;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--myTurquoise);
+  opacity: 0;
+  transform: translateY(32px);
+  margin-top: 10%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.link-item.active .link-text{
+  opacity: 1;
+}
+
+.indicator{
+  position: absolute;
+  top: -44px;
+  right: 95px;
+  height: 36px;
+  width: 36px;
+  background-color: var(--Mywhite);
+  border: 9px solid var(--Mylighblue);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.indicator::before,
+.indicator::after{
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  height: 24px;
+  width: 19px;
+}
+.indicator::before{
+  right: -22px;
+  background-color: var(--Mywhite);
+  border-top-left-radius: 25px;
+  box-shadow: -1px -13px var(--Mylighblue);
+}
+.indicator::after{
+  left: -22px;
+  background-color: var(--Mywhite);
+  border-top-right-radius: 25px;
+  box-shadow: 1px -13px var(--Mylighblue);
+}
+@media only screen and (max-width: 728px) { 
+
+
+  nav{
+    margin-right: 15%;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-left: -5%;
+
+  }
+  .nav-content{
+    height: 120px;
+  }
+  .link-item{
+    margin-right: -10%;
+    height: 45px;
+    width: 50px;
+    margin-left: 40%;
+  }
+  .link-text{
+    font-size: 10px;
+    margin-top: 25%;
+  }
+  .indicator{
+    top: -8px;
+    height: 0px;
+    width: 2px;
+    border: 9px solid var(--Mylighblue);
+  }
+  }
+
+  /* עמוד ראשי*/
+#subtitle{
+    animation-duration: 2s;
+    animation-name: subtitlein;
+    align-self: center;
+    width: 70%;
+   margin-right: 10%; 
+    margin-left: 25%;
+    margin-top: -5%;
+}
+@keyframes subtitlein {
+    from {
+      margin-right: 100%;
+      width: 300%;
+    }
+ 
+    to {
+        margin-right: 0%;
+        width: 100%;
+      }
+    }
+  
+.loging{
+    padding: 50px;
+    width: 206px;
+    height: 270px;
+    margin: auto;
+}
+form{
+    box-sizing: border-box;
+    font-size: large;
+
+    }
+h2{
+    font-size: 30px;
+    margin-top: -5%;
+}
+
+form.Fisrt2 {
+    display: table;
+}
+
+div.Fisrt2 {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+   
+@media only screen and (max-width: 728px) {    
+    .loging {
+      max-width: 100%;
+      width: 150px;
+      height: 200px;
+      background-color: var(--Mywhite);
+      
+    }
+    .loging label, input {
+      margin-top: -40%;
+      }
+    h2{
+       font-size: small;
+      }
+  }
+#Email{
+    height: 3vh;
+    width: 16vw;
+}
+#Password{
+   height: 3vh;
+    width: 16vw; 
+}
+@media only screen and (max-width: 728px) {    
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      margin-top: -2%;
+    }
+  }
+
+
+
+.Exitbutton{
+    margin-right: 100%;
+}
+
+
+.Details{
+    width: 60%;
+    margin-right: 0%;
+    margin-left: 10%;
+
+}
+.Details input[type=text] {
+    width: 200px;
+  }
+.Details input[type=password] {
+    width: 200px;
+
+
+  }
+.Details  input[type=email] {
+    width: 511px;
+    margin-right: 7%;
+   
+  }
+  
+#mail2{
+    margin-right: 5%;
+}
+@media only screen and (max-width: 728px) {    
+  .Details{
+    width: 60%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+  
+    .Details input[type=text] {
+        width: 100px;
+      }
+    .Details input[type=password] {
+        width: 100px;
+    
+    
+      }
+    .Details  input[type=email] {
+        width: 280px;
+        margin-right: 3%;
+       
+      }
+      * {
+        font-size: small;      }
+      
+  }
+  
+.Details .myButtongreen{
+    width: 17vw;
+    margin-right: 35%;
+    margin-left: 10%;   
+}
+
+
+.Details .myButtonblue{
+    width: 17vw;
+    margin-right: 35%;
+    margin-left: 10%;   
+
+}
+
+
+
+     
+.myButtonblue {
+    text-align: center;
+    margin-right: 3%;
+    margin-left: 30%;
+	box-shadow:inset 0px 1px 3px 0px var(--Myblue);
+	background:linear-gradient(to bottom, #084af3 5%, #3754e8 100%);
+	background-color: var (--Myblue);
+	border-radius:5px;
+	border:1px solid var(--Myblue);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--Mywhite);
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 43px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px var(--Myblue);
+    width: 17vw;
+}
+.myButtonblue:hover {
+	background:linear-gradient(to bottom, #08e7fc 5%, #2189f1 100%);
+	background-color:var(--Myblue);
+}
+.myButtonblue:active {
+	position:relative;
+	top:1px;
+}
+@media only screen and (max-width: 728px) {    
+    .myButtonblue {
+        padding:10px 30px;
+      text-align: center;
+      font-size:12px;
+   
+    }
+  }
+.myButtongreen {
+    width:100px;
+    margin-right: 0%;
+    margin-left: 40%;
+	background-color: var(--Mygrey);
+	border-radius:28px;
+	border:1px solid var(--mydarkgreen);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--Mywhite);
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 60px;
+    font-weight:bold;
+	text-decoration:none;
+	text-shadow:1px -1px 0px var(--myOlivegreen);
+}
+.myButtongreen:hover {
+    background:linear-gradient(to bottom, #a9fa59 5%, #21f121 100%);
+	background-color:var(--Mygrey);
+}
+.myButtongreen:active {
+	position:relative;
+	top:1px;
+}
+
+@media only screen and (max-width: 728px) {    
+    .myButtongreen {
+      width: 15vw;
+      padding:2px 15px;
+      text-align: center;
+      font-size:12px;
+  
+   
+    }
+  }
+.open{
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 300ms ease;
+    padding: 80px;
+    width: 300px;
+    height: 10px;
+
+    background-color: var(--Mywhite);
+    margin-block-end: 2%;
+    margin-top: 1%;
+    margin-right: 33%;
+}
+p {
+    font-size: 20px;
+    font-weight:bold;
+    width: 350px;
+    margin-top: -19%;
+    margin-right: -8%;
+
+}
+
+  
+
+
+
+.Lookmatch .myButtonblue{
+    align-self: center;
+    margin-right: 40%;
+    margin-left: 50%;
+    animation: lookmatchbutto 2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes lookmatchbutto {
+    0% {color: rgb(227, 241, 29);}
+    25% {color: rgb(248, 81, 218)}
+    50% {color: rgb(162, 248, 143)}
+    75% {color: rgb(252, 138, 140)}
+    100% {color: rgb(127, 254, 168)}
+}
+
+.allRequests{
+    background-color: var(--Mywhite);
+    padding: 95px;
+    width: 900px;
+    height: 110px;
+    margin-left: 0%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+.allRequests .myButtonblue{
+margin-right: 40%;
+
+}
+
+
+@media only screen and (max-width: 728px) {        
+    .open{
+        padding: 50px;
+        width: 260px;
+        height: 70px;
+        margin-right: 15%;
+        margin-top: 2%;
+      
+      }
+      p{
+        margin-top: -18%;
+        margin-right: -20%;
+      }
+      .Lookmatch .myButtonblue{
+        align-self: center;
+        width:150px;
+        margin-right: 33%;
+        margin-left: 50%;
+        animation: lookmatchbutto 2s;
+        animation-iteration-count: 3;
+    }
+
+    .logout{
+      font-size:15px;
+
+    }
+
+
+  }
+
+.allRequests h2{
+    margin-top: -10%;
+}
+table {
+    border: 1px solid var(--myLightgray);
+    width: 100%;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 800px;
+    margin: 20px auto;
+  
+  }
+  
+
+  thead > tr > th {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  @media only screen and (max-width: 728px) {        
+    .allRequests{
+        background-color: var(--Mywhite);
+        padding: 30px;
+        width: 350px;
+        height: 229px;
+        margin-left: 0%;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+    .allRequests h2{
+        margin-top: -7%;
+    }
+    .table{
+        border: 1px solid var(--myLightgray);
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-weight: 100;
+        font-size: 10px;
+        max-width: 300px;
+      }
+      thead > tr > th {
+        font-weight: 100;
+        font-size: 10px;
+      }
+      table tr {
+        border: 1px solid #ddd;
+        padding: 2px;
+      }
+      
+      table th,
+      table td {
+        padding: 5px;
+        text-align: center;
+      }
+      
+      table th {
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+  }
+ .profilebutton{
+    margin-top: -100%;
+    margin-left: -10%;
+ } 
+ h3{
+    margin-top: 2%;
+    margin-right: 5%;
+    font-size: 30px;
+    font-weight:bold;
+ }
+
+ #profession{
+    margin-right: 25%;
+    font-size: 20px;
+ }
+ #level{
+    margin-right: 15%;
+    font-size: 20px;
+ }
+
+#Give{
+    margin-right: 0%;
+    font-size: 15px;
+    margin-block-end: 3%;
+
+}
+h4{
+    font-size: 20px;
+    font-weight: normal;
+}
+#Online{
+    margin-right: 30%;
+    font-size: 15px;
+    margin-top: -11%;
+    margin-block-end: 3%;
+}
+#Createarequest{
+    margin-top: 0%;
+}
+@media only screen and (max-width: 728px) { 
+    h3{
+        font-size: 25px;
+     }
+    #Give {
+       
+        margin-right: 0%;
+        margin-top: -5%;
+     }
+     #Online{
+        margin-right: 50%;
+        margin-top: -18%;
+        margin-left: 0%;
+        margin-inline-end: 3%;
+     }
+
+ }
+
+.notfound{
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 300ms ease;
+    padding: 130px;
+    width: 300px;
+    height: 40px;
+    margin: auto;
+    background-color: var(--Mywhite);
+    margin-block-end: 2%;
+    margin-top: 1%;
+}
+.notfound p{
+    margin-top: -40%;
+    margin-right: -5%;
+    font-size: 25px;
+}
+.notfound .myButtonblue{
+    margin-top: 20%;
+    margin-right: 5%;
+    margin-inline-end: 15%;
+}
+.notfound .myButtongreen{
+    margin-top: 10%;
+    margin-right: 17%;
+    width: 110px;
+    text-align: center;
+}
+@media only screen and (max-width: 728px) {        
+    .notfound{
+        padding: 50px;
+        width: 277px;
+        height: 90px;
+        margin-right: 10%;
+        margin-top: 2%;
+        margin-left: 0%;
+      
+      }
+      .notfound p{
+        margin-top: -15%;
+        margin-right: -15%;
+      }
+      .notfound .myButtonblue{
+        margin-right: 25%;
+        margin-top: 2%;
+        
+
+      }
+    }
+
+    
+
+
+
+
+
