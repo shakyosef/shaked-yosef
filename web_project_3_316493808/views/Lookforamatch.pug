@@ -1,0 +1,42 @@
+extends layout 
+block content 
+    h3 #{variable1} 
+    h3  #{variable0} 
+    form(action='/lookmacth' method='POST' )
+        label#profession #{variable2}
+            select(name='profession')
+                option(value='0') #{variable3}
+                option(value='1') #{variable4}
+                option(value='2') #{variable5}
+                option(value='3') #{variable18}
+        label#level #{variable6}
+            select(name='levelofstudy')
+                option(value='0') #{variable7}
+                option(value='1') #{variable8}
+                option(value='2') #{variable9}
+                option(value='3') #{variable10}
+                option(value='3') #{variable11}
+                option(value='3') #{variable12}
+                option(value='3') #{variable13}
+                option(value='3') #{variable14}
+                option(value='3') #{variable15}
+                option(value='3') #{variable16}
+                option(value='3') #{variable17}
+        br
+        br
+        #Give
+            h4  #{variable19}
+            input.search(type='radio' name='Give' value='1' checked='' ) 
+            h8 #{variable20}
+            input.search(type='radio' name='Give' value='0') 
+            h8  #{variable21} 
+        br
+        #Online
+            h4  #{variable22}   
+            input.search(type='radio' name='Online' value='1' checked='')  
+            h8  #{variable23}  
+            input.search(type='radio' name='Online' value='0')  
+            h8 #{variable24} 
+        .Lookmatch
+            input.searc.myButtonblue#look(type='submit'  value='חפש/י התאמה'  )
+            p#p 

@@ -1,0 +1,28 @@
+extends layout 
+block content 
+    h3  #{variable1}
+    h6  #{variable9}
+    .Details
+        form(action='/update' method='POST')
+            .Fisrt2
+                label(for='') #{variable2}
+                input.search(type='text', name='Firstname' , placeholder=  Firstname )
+                label(for=' ') #{variable3}
+                input.search(type='text', name='LastName' , placeholder= LastName  )
+                br
+            .Fisrt2
+                label(for='') #{variable4}
+                input.search#ID(type='text', name='ID', placeholder= ID ,readonly)
+                label(for='') #{variable5}
+                input.search#Hometown(type='text' ,name='Hometown', placeholder= Hometown )
+                br
+            .Fisrt2
+                label(for=' ') #{variable6}
+                input.search#PhoneNumber(type='text' ,name='PhoneNumber', placeholder= PhoneNumber )
+                label(for='') #{variable7}
+                input.search#Password2(type='password', name='Password',placeholder= Password )
+            .Fisrt2
+                label(for='') #{variable8}
+                input.search#mail(type='email' ,name='mail',placeholder= mail )
+                br
+            input.search.myButtongreen(type='submit' value='שמירה')

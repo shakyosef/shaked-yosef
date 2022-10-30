@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='stylesheet.css')
+  script(defer='' src='javascript.js')
+  title a new account
+a.Exitbutton(href='/')
+  img.responsive-img(src='image/exit.png')
+header
+  img.responsive-img(src='image/titel2.png')
+h2  הרשמה
+h8#p 
+.Details
+    p #{var1}
+    form(action='/insertuser', method='POST', onclick='GetLocation()')
+        .Fisrt2
+                label(for='') שם פרטי
+                input.search(type='text' ,name='Firstname', required)
+                label(for='') שם משפחה
+                input.search(type='text' ,name='LastName' , required)
+         
+        .Fisrt2
+                label(for='') תעודת זהות 
+                input.search#ID(type='text' ,name='ID' , required) 
+                label(for='') עיר מגורים
+                input.search#Hometown(type='text' ,name='Hometown' , required)
+               
+        .Fisrt2
+                label(for='') טלפון
+                input.search#PhoneNumber(type='text' ,name='PhoneNumber' , required)
+                label(for='') סיסמה
+                input.search#Password2(type='password' ,name='Password', required )
+ 
+        .Fisrt2
+                label(for='') דוא"ל
+                input.search#mail(type='email' ,name='mail', required)
+                label(for='') 
+                input(type='hidden' id='lat' name='lat')
+                label(for='') 
+                input(type='hidden' id='lon' name ='lon')
+           
+        input.search.myButtongreen(type='submit' ,value='הרשמה' )

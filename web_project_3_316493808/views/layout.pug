@@ -1,0 +1,44 @@
+doctype html
+
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='stylesheet.css')
+        script(defer='' src='javascript.js')
+        title Look for a match
+    body
+        a.Exitbutton(href='Privateprofile')
+            img.responsive-img(src='image/exit.png')
+        a.logout(href='/')  התנתק/י
+        header
+            img.responsive-img(src='image/titel2.png')
+        nav.nav
+            ul.nav-content
+                li.nav-list
+                    a.link-item.active(href='Privateprofile')
+                        img.myprofile(src='image/myprofile.png')
+                        span.link-text פרופיל שלי
+                li.nav-list
+                    a.link-item(href='personaldetails' )
+                        img.editing(src='image/editing.png')
+                        span.link-text עריכת פרופיל
+                li.nav-list
+                    a.link-item(href='myrequests')
+                        img.reguests(src='image/reguests.png')
+                        span.link-text בקשות שמחכות לאישורי
+                li.nav-list
+                    a.link-item(href='mymatch')
+                        img.match(src='image/mach.png')
+                        span.link-text ההתאמות שלי
+                span.indicator
+        block content
+    
+
+
+//
+  Details page to find a match.
+  Site navigation menu.
+  Profession details and level of study from existing options.
+  Match target details and preferred meeting mode by buttons from which only one can be selected

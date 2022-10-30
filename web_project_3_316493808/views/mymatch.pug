@@ -1,0 +1,31 @@
+extends layout 
+block content 
+    .allRequests
+        h2 #{variable1} 
+        table
+           
+                tr
+                    th 
+                       h8 #{variable2}    
+                    th 
+                        h8 #{variable3}    
+                    th 
+                        h8 #{variable4}    
+                    th 
+                        h8 #{variable5} 
+                    th 
+                        h8 #{variable6}       
+                  
+                        
+
+                each n in mache
+                    tr
+                    td= n.Firstname1
+                    td= n.mail1
+                    td= n.code
+                    td= n.PhoneNumber1
+                    td= n.dist  
+                
+
+       
+    

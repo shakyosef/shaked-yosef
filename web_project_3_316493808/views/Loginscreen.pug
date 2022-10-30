@@ -1,0 +1,40 @@
+doctype html
+| 
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='stylesheet.css')
+  script(defer='' src='javascript.js')
+  title Loginscreen
+header
+  img.responsive-img(src='image/titel2.png')
+h3#subtitle
+  img.responsive-img(src='image/minititel.png')
+.loging
+  p #{var1}
+  form(action='/find' method='GET' onclick='GetLocation()')
+    label.Fisrt2(for='')  דוא"ל          
+    input#Email(type='email' name='Email', required)
+    br
+    br
+    label.First2(for='') סיסמה       
+    input#Password(type='password' name='Password', required)
+    br
+    br
+    input.myButtonblue(type='submit' value='התחבר/י')
+    br
+    br
+    br
+    label(for='') 
+    input(type='hidden' id='lat' name='lat')
+    label(for='') 
+    input(type='hidden' id='lon' name ='lon')
+    a.myButtongreen(href='newaccount') צור חשבון חדש
+
+//
+  Site login page.
+  Main title, secondary title.
+  Preparing a mail value - does not allow another value.
+  Preparing a password value - seen in dots.
+  Option to connect or create a new account

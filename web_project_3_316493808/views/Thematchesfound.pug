@@ -1,0 +1,36 @@
+extends layout 
+block content 
+    .allRequests 
+        h2 #{variable1}
+        form(action='/savemymatch' method='POST'  )
+            table#Createarequest       
+                tr
+                        th 
+                            h8 #{variable2}    
+                        th 
+                            h8 #{variable3}    
+                        th 
+                            h8 #{variable4}    
+                        th 
+                            h8 #{variable5}       
+                        th
+                            h8 #{variable9}
+                           
+                        th
+                            h8  #{variable6}
+
+                each n in mache
+                    tr
+                    td= n.Firstname2
+                    td= n.PhoneNumber2
+                    td= n.mail2
+                    td= n.code
+                    td= n.dist   
+                    td 
+                        input.search(type='radio' name= n.id  value= 1  checked='')
+                        h8  #{variable7} 
+                        input.search(type='radio' name= n.id value= 0 )
+                        h8  #{variable8}
+            input.searc.myButtonblue(type='submit' value='שמירה')
+            
+
